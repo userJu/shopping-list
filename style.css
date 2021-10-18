@@ -1,37 +1,78 @@
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
+}
+ul {
   padding: 0;
-  background-color: rgb(223, 232, 236);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  text-align: center;
-  cursor: default;
 }
-h1 {
-  background-image: linear-gradient(70deg, pink, lightblue);
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 20px;
-  border-radius: 6px;
-  color: white;
+body {
+  background-color: #ced3df;
 }
-#upload {
-  background-image: linear-gradient(70deg, pink, lightblue);
-  padding-bottom: 20px;
-  border-radius: 6px;
-}
-#upload #inputText {
-  width: 100%;
-  padding-top: 2px;
-}
-#upload .uploadBtn {
-  all: unset;
-  color: white;
+button {
+  outline: none;
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
-.uploadBtn .fas {
-  font-size: 60px;
-  margin: 10px;
+.list {
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  background-color: rgb(233, 246, 247);
+  border-radius: 20px;
+}
+
+.header {
+  height: 48px;
+  padding: 8px;
+  font-size: 24px;
+  background-image: linear-gradient(70deg, pink, lightblue);
+  border-radius: 20px 20px 0 0;
+  color: rgb(233, 246, 247);
+}
+.items {
+  height: 500px;
+  overflow-y: auto;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 32px;
+}
+.item__delete {
+  font-size: 16px;
+  transition: all 300ms ease-in;
+}
+.item__delete:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.item__divider {
+  height: 2px;
+  width: 90%;
+  background-color: lightgrey;
+  margin: auto;
+}
+.footer {
+  background-image: linear-gradient(70deg, pink, lightblue);
+  border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
+  width: 100%;
+  height: 32px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 16px;
+}
+.footer__button {
+  width: 48px;
+  height: 48px;
+  color: white;
+  border-radius: 50%;
+  font-size: 32px;
+  transition: all 300ms ease-in;
+}
+.footer__button:hover {
+  transform: scale(1.1);
 }
