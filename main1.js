@@ -28,9 +28,10 @@ function loadItem(value){
     const deleteBtn = document.createElement('button')
     deleteBtn.setAttribute('class','item__delete')
     deleteBtn.innerHTML=`<i class="fas fa-trash-alt"></i>`
-    deleteBtn.addEventListener('click', ()=>{
-        li.remove()
-    })
+    // deleteBtn.addEventListener('click', ()=>{
+    //     li.remove()
+    // })
+
 
     const divider = document.createElement('div')
     divider.setAttribute('class','item__divider')
@@ -42,6 +43,14 @@ function loadItem(value){
     li.appendChild(divider)
     
 }
+
+items.addEventListener('click', (e)=>{
+    const target = e.target
+    if(target.classList[0] === 'fas'){
+        target.parentNode.parentNode.parentNode.remove()
+    }
+
+})
 
 footerInput.addEventListener('keydown',(e)=>{
     if(e.key === "Enter"){
