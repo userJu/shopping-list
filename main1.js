@@ -1,6 +1,12 @@
 const items = document.querySelector('.items')
+const form = document.querySelector('.new__form')
 const footerBtn = document.querySelector('.footer__button')
 const footerInput = document.querySelector('.footer__input')
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    manageItem()
+})
 
 function manageItem(){
     const value = footerInput.value
@@ -57,19 +63,6 @@ function loadItem(value){
     
 }
 
-footerInput.addEventListener('keydown',(e)=>{
-    if(e.key === "Enter"){
-        manageItem();
-    }else{
-        return;
-    }
-})
-
-
-footerBtn.addEventListener('click', ()=>{
-    manageItem();
-
-})
 
 items.addEventListener('click', (e)=>{
     const id = e.target.dataset.id
